@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {font-family: Montserrat}
+body{background-color:white}
+h1{font-weight:600; font-size:60px; letter-spacing:-1px}
+h2{font-weight:600; font-size:45px}
+h3{font-weight:600; font-size:26px; line-height:36px}
+h4{font-weight:500; font-size:22px;}
+h5{font-weight:400; font-size: 19px; letter-spacing:-0.2px;}
+h6{font-weight:300; font-size: 18px;}
+p{line-height:21px;}
+small{font-weight:300; font-size: 14px;}
+a:hover, a:visited,a{text-decoration:inherit; color:inherit;}
+.regular{font-weight:400}
+.medium{font-weight:500}
+.navbar-brand{font-weight:700; font-size:28px; letter-spacing:2px} /* Logo */
+.text-azul{color:rgb(27,54,98)}
+.carousel-indicators .active{background-color:rgb(255,200,46)}
+
+.carousel-control-prev-icon-2 {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-next-icon-2 {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.footer a, .header a{color:white}
+.footer a:hover,.header a:hover{color:rgb(255,200,46);}
+.header .active{border-bottom: 1px solid rgb(255,200,46);padding-bottom:0; border-radius: 0}
+
+.hover-app{color:white}
+.hover-out-app{background:rgb(255,200,46); color:black}
+
+.btn-blanco{color:white;border:1px solid;border-radius:35px}
+.btn-blanco:hover{background:white;color:rgb(27,54,98)}
+
+.btn-negro{color:white !important;border-radius:35px;background:black}
+.btn-negro:hover{background:white;color:rgb(27,54,98)!important}
+
+.btn-azul, .trendsdiscover-btn{color:rgb(27,54,98);border:1px solid;border-radius:35px;}
+.btn-azul:hover{background:rgb(27,54,98);color:white}
+
+.btn-no-hover:hover{background:inherit;color:inherit;}
+
+.nav-link{color:inherit}
+
+.trendsdiscover-box{background-color:white; color:rgb(27,54,98); border-radius:15px;}
+.trendsdiscover-box:hover{background-color:rgb(27,54,98); color:white;}
+
+.filter-green{filter: invert(85%) sepia(42%) saturate(402%) hue-rotate(97deg) brightness(96%) contrast(94%);}
+
+.sidebar {width:50px; right:0; top:0;overflow-x: hidden;transition: 0.5s;}
+
+.hover-up:hover{position: relative; top: -5px}
+.hover-up-shadow:hover{position: relative; top: -5px; box-shadow: 0px 5px 15px rgba(0,0,0,0.5);}
+.hover-back-azul:hover{background:rgb(9,30,64) !important;}
+
+.custom-nav-tabs .active{font-weight:bold; border-bottom: 2px solid; }
+
+
+.home-tarjeta-responsive{width:100%; min-width:240px; min-height:300px}
+@media only screen and (max-width: 1200px) { /* XL */
+  .home-tarjeta-responsive{max-width:270px;}
+}
+
+
+@media only screen and (max-width: 992px) { /* LG */
+  h1{font-size:40px}
+}
+
+
+@media only screen and (max-width: 728px) { /* MD */
+  h1{font-size:40px}
+}

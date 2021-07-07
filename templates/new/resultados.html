@@ -1,0 +1,228 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "new/imports.html" %}
+  <title>Resultados</title>
+</head>
+<body>
+
+  {% include "new/header.html" %}
+
+<div class="py-5" style="background:rgb(27,54,98)">
+  <div class="container py-5 text-white">
+    <h3>Resultados</h3>
+    <p>Queremos ayudarte a conocer tu grado de aproximación a una gestión ética de la información en tu empresa.
+      Te permitirá identificar cuáles son tus puntos fuertes y en qué ambitos deberías mejorar.</p>
+      <p>En este sentido aborda 7 áreas:</p>
+      <div>1. Adecuación de tu <span style=" font-weight:700">finalidad y las medidas</span> adoptadas para limitar el tratamiento cuando fuera necesario.</div>
+      <div>2. Alineación del tratamiento con el principio de <span style=" font-weight:700">licitud y obtención del consentimiento</span> de manera adecuada.</div>
+      <div>3. Enfoque de comunicación con respecto a la <span style=" font-weight:700">transparencia</span>.</div>
+      <div>4. Relación del tratamiento con procesos complejos basados en tecnologías novedosas como <span style="font-weight:700">decisiones automatizadas y perfilado</span>.</div>
+      <div>5. Seguridad y <span style="font-weight:700">control de la información</span>.</div>
+      <div>6. Tu modelo de <span style="font-weight:700">evaluación de riesgos</span> previos al tratamiento.</div>
+      <div>7.<span style="font-weight:700"> Otras prácticas</span> complementarias que te ayudarán a alcanzar una gobernanza realmente ética.</div>
+    </div>
+  </div>
+
+    <div class="py-5">
+      <div class="container py-5">
+        <small>-- RESPUESTAS</small>
+        <h3>Área de mejora</h3>
+        <div>
+          <canvas id="myChart2" style="width:1000px; height:600px"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5" style="background:rgb(240,240,240)">
+      <div class="container mb-5 py-5">
+        <small>-- DIAGNÓSTICO</small>
+        <h3>Nivel de adecuación a un marco ético</h3>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Finalidad, licitud y consentimiento</h4>
+            {% if finalidadlicitudyconsentimiento < 4 %}
+            <p>La finalidad y licitud que sigue tu tratamiento, así como la forma en que obtienes el consentimiento <b>no están alineados con un enfoque ético</b>. Puesto que este es el primer punto que se plantea en cualquier tratamiento de datos, quizás <b>deberías replantear el uso de la información</b> que se da en tu empresa.</p>
+            {% else %}
+            <p>La finalidad y licitud que sigue tu tratamiento, así como la forma en que obtienes el consentimiento <b>están alineados con un enfoque ético</b>.</p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Medidas de limitación</h4>
+            {% if limitacion < 5 %}
+            <p>Los mecanismos empleados para garantizar la privacidad de los interesados, tales como anonimización o minimización <b>son insuficientes</b>. Este es un punto clave para minimizar las posibles consecuencias negativas dadas por el uso de la información, por lo que <b>deberías destinar más recursos a este campo</b>.</p>
+            {% else %}
+            <p>Los mecanismos empleados para garantizar la privacidad de los interesados, tales como anonimización o minimización <b>aparentan ser suficientes</b>.</p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Transparencia</h4>
+            {% if transparencia < 5 %}
+            <p>El plan de comunicación que sigue tu entidad <b>no es suficientemente transparente</b>. Para poder generar confianza en los grupos de interés debes <b>enfocar de otra manera la manera en que comunicas</b> .</p>
+            {% else %}
+            <p>El plan de comunicación que sigue tu entidad <b>se dirige a ser suficientemente transparente</b>. Siguiendo este planteamiento podrás generar confianza en los grupos de interés.</p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Decisiones automatizadas y perfilado</h4>
+            {% if decisionesautomatizadasperfilado < 5 %}
+            <p>Tus procesos de toma de decisiones automatizadas y/o perfilado <b>carecen de las medidas necesarias</b>. Debido a la naturaleza de estos tratamientos deberías <b>incrementar los esfuerzos en asegurar</b> que se realizan de forma ética.</p>
+            {% else %}
+            <p>Tus procesos de toma de decisiones automatizadas y/o perfilado <b>asemejan poseer de las medidas necesarias</b>.</p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Control</h4>
+            {% if control < 4 %}
+            <p>El control que llevas sobre los datos en tu organización <b>no es el adecuado</b>. <b>Debes ser consciente de la relevancia</b> que tiene la vigilancia de la información y actuar en consecuencia.</p>
+            {% else %}
+            <p>El control que llevas sobre los datos en tu organización <b>parece que es el adecuado</b>.</p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>Evaluación de riesgos</h4>
+            {% if eipd < 4 %}
+            <p>Tu grado de conocimiento de los posibles riesgos a los que te expones con tu tratamiento de datos es <b>insuficiente</b> para garantizar que tu modelo de gestión es ético. <b>Necesitas comprender rápidamente</b> cuáles son los riesgos a los que te expones y cómo contrarrestarlos.</p>
+            {% else %}
+            <p>Tu grado de conocimiento de los posibles riesgos a los que te expones con tu tratamiento de datos es <b>suficiente</b>. </p>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="ml-5" align="left" style="border-top: 1px solid rgb(255,200,46); max-width:150px">
+        <div class="d-flex">
+          <div>
+            <h4>En conjunto</h4>
+            {% if sumrespuestas <= 30 %}
+            <p>Parece que en general la gobernanza de los datos en tu empresa <b>dista de seguir un modelo ético.</b> Te recomendamos que estudies la propuesta que te ofrecemos en el siguiente apartado, dónde destacamos tus puntos débiles, y que analices nuestra guía al completo al margen de estos.</p>
+            {% else %}
+            <p>Parece que en general la gobernanza de los datos en tu empresa <b>está bien encaminada hacia un modelo ético.</b> Te recomendamos que estudies la propuesta que te ofrecemos en el siguiente apartado, dónde destacamos tus puntos débiles para que puedas mejorar tus prácticas en la materia.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5">
+      <div class="container mb-4">
+        <small class="text-azul">-- NUESTRA RECOMENDACIÓN</small>
+        <h3 class="pt-3">Creemos que esto es lo que necesitas</h3>
+        <div class="row row-cols-3 pt-3">
+          {% if finalidadlicitudyconsentimiento < 4 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/1.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br>Finalidad, licitud y consentimiento</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if limitacion < 5 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/6.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br>Medidas de<br> limitación</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if transparencia < 5 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/3.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br><br> Transparencia</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if decisionesautomatizadasperfilado < 5 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/7.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3>Decisiones automatizadas y perfilado</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if control < 4 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/5.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br>Control de la información</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if eipd < 4 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/2.jpg' %}'); background-size: cover; background-position: top;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br>Evaluación de<br> riesgos</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if otros < 4 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/4.jpg' %}'); background-size: cover; background-position: center;">
+                <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+                <h3><br>Otras<br> prácticas</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if sumrespuestas <= 30 %}
+          <div class="col px-2 pb-3">
+            <a role="button" href="{% url 'home' %}">
+              <div class="trendsdiscover-box p-3 text-white hover-up-shadow"style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/Macrotendencias.jpeg' %}'); background-size: cover">
+                <div class="btn trendsdiscover-btn mb-5 text-white"><small>Descargar</small></div>
+                <h3><br><br>Guía completa</h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          <div class="col-12 text-center">
+            <a class="text-center btn btn-azul mt-4" role="button" href="{% url 'autodiagnostico' %}"><small>Volver al panel</small></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% include "new/footer.html" %}
+
+    {% include "new/scripts.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>const respuestas = {{ respuestas|safe }};
+    console.log(respuestas)
+    const sector = {{ sector|safe }};
+  </script>
+    <script src="{% static 'js/resultadosDiagnostico.js' %}"></script>
+
+  </body>
+
+  </html>

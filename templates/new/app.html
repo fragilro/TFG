@@ -1,0 +1,241 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "new/imports.html" %}
+  <title>Panel</title>
+</head>
+<style>.abold a:hover{font-weight:bold; text-decoration:underline;}</style>
+<body style="background-color:rgb(240,240,240)">
+  {% include "new/header.html" %}
+  <div class="text-white py-5" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/Macrotendencias.jpeg' %}'); background-size: cover">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-4 abold">
+          <h3>¿Qué necesitas?</h3>
+          <div><a href="#">Guía completa</a></div>
+          <div><a href="javascript:moverA('porsecciones')">Por secciones</a></div>
+          <div><a href="javascript:moverA('autodiagnostico')">Autodiagnóstico</a></div>
+          <div><a href="javascript:moverA('carouselIndicators')">Otras guías</a></div>
+        </div>
+        <div class="col-8 text-right">
+          <h2>Guía completa para el uso ético del Big Data</h2>
+          <a class="btn btn-blanco mt-4" style="width:200px" role="button" href="#"><small>Descargar</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-5 text-azul">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col d-flex flex-column p-5 justify-content-center ">
+          <small class="text-azul pb-3">GUÍA PARA EL USO ÉTICO DEL BIG DATA</small>
+          <h3 class="pb-3">La herramienta con la que podrás adecuar el tratamiento y uso de información en tu empresa a un marco ético adecuado.</h3>
+          <h4 class="pb-3">Todo lo que necesitas saber para mejorar en materia de privacidad, transparencia y otros ámbitos de interés actual.</h4>
+          <p>Incrementa la confianza de los stakeholders en tu organización y posiciónate frente a tus competidores.</p>
+          <div class="pt-3">
+            <a style="width:170px" class="text-center btn btn-azul px-4" role="button" href="#"><small>Descargar</small></a>
+          </div>
+      </div>
+      <div class="col d-flex m-auto">
+        <img class="img-fluid" src="{% static 'media/recursos/1.png' %}"></img>
+      </div>
+    </div>
+  </div>
+
+<div class="py-5" style="background:white">
+  <div id="porsecciones" class="container py-5 text-azul">
+    <div class="row row-cols-3 pt-3">
+      <div class="col-12 pb-3">
+        <h2>Por secciones</h2>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/1.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br>Finalidad, licitud y consentimiento</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/6.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br>Medidas de<br> limitación</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/3.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br><br> Transparencia</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/7.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3>Decisiones automatizadas y perfilado</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/5.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br>Control de la información</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/2.jpg' %}'); background-size: cover; background-position: top;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br>Evaluación de<br> riesgos</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col px-2 pb-3">
+        <a role="button" href="{% url 'home' %}">
+          <div class="trendsdiscover-box p-3 text-white hover-up-shadow" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/caps/4.jpg' %}'); background-size: cover; background-position: center;">
+            <div class="btn trendsdiscover-btn  mb-5 text-white"><small>Descargar</small></div>
+            <h3><br>Otras<br> prácticas</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="autodiagnostico" class="container my-5 text-azul">
+    <div class="row">
+      <div class="col-12 pb-3">
+        <h2>Autodiagnóstico</h2>
+      </div>
+      <div class="col-6 d-flex m-auto">
+        <img class="img-fluid" src="{% static 'media/2.Innovationsearcher.jpeg' %}"></img>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column p-5 justify-content-center">
+          <small class="text-azul">EVALÚA TU POSICIÓN ACTUAL</small>
+          <h3>Responde a este cuestionario y recibe un informe sobre tu nivel de adecuación a un marco ético.</h3>
+          <h4>Te indicamos aquellas áreas en las que necesitas mejorar y los recursos para hacerlo.</h4>
+          <p>Podrás visualizar un diagnóstico en base a tus respuestas, y observar tu evolución con autodiagnósticos anteriores.</p>
+          <div>
+            <a style="width:170px" class="text-center btn btn-azul px-4" role="button" href="{% url 'autodiagnostico' %}"><small>Acceder</small></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselIndicators" class="carousel slide text-azul" data-ride="carousel" style="background:white">
+    <div class="container py-5">
+      <div class="row pt-4">
+        <div class="col-12">
+          <h2>Otras guías</h2>
+        </div>
+      </div>
+    </div>
+    <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner pb-5">
+      <div class="carousel-item active">
+        <div class="container pb-4">
+          <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2020-07/guia-cookies.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/1.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>Guía sobre el uso de las cookies</h5>
+            </div>
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2019-09/guia-evaluaciones-de-impacto-rgpd_0.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/2.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>Guía práctica para las evaluaciones de impacto...</h5>
+            </div>
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2019-09/guia-analisis-de-riesgos-rgpd.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/3.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>Guía práctica de análisis de riesgos...</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container pb-4">
+          <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2020-02/adecuacion-rgpd-ia.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/4.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>Adecuación al RGPD de tratamientos que incorporan Inteligencia Artificial</h5>
+            </div>
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2019-11/nota-tecnica-apps-moviles.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/5.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>El deber de informar y otras medidas de responsabilidad proactiva</h5>
+            </div>
+            <div class="col py-2 text-center">
+              <a href="https://www.aepd.es/sites/default/files/2019-09/listas-dpia-es-35-4.pdf" target="_blank" style="z-index:1;">
+                <div class="h-100" style=" border-radius:15px">
+                  <div class="d-flex hover-up-shadow align-items-start justify-content-between p-2 text-white" style="background:url('{% static 'media/recursos/6.png' %}');background-size: cover;box-shadow: 0px 5px 15px rgba(0,0,0,0.3);background-position: center;border-radius:15px; height:400px">
+                  </div>
+                </div>
+              </a>
+              <h5>Tipos de tratamiento que requieren evaluación de impacto</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon carousel-control-prev-icon-2" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon carousel-control-next-icon-2" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<div class="py-5" style="background:white"></div>
+  {% include "new/footer.html" %}
+
+  {% include "new/scripts.html" %}
+
+  <script>
+  function moverA(x) {
+    var destino = document.getElementById(x);
+    $('html,body').animate({
+      scrollTop: $(destino).offset().top},
+      'slow');
+    }
+    </script>
+
+  </body>
+
+  </html>

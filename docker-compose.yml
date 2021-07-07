@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  app:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: DockerfileDev
+    volumes:
+      - .:/code
+    command: "python3 manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+       MYSQL_DATABASE: 'TFGDB'
+       MYSQL_USER: 'javi'
+       MYSQL_PASSWORD: 'innsai'
+       MYSQL_ROOT_PASSWORD: 'innsai'
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

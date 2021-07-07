@@ -1,0 +1,30 @@
+{% load static %}
+{% if msg %}
+<script>
+    alert('{{msg}}')
+</script>
+{% endif %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+</head>
+<body class="text-center">
+<form action="/postsign/" method="post" class="form-signin">
+    {% csrf_token %}
+    <img class="mb-4" src="https://media-exp1.licdn.com/dms/image/C4E0BAQEUMY9i06oiyQ/company-logo_200_200/0?e=2159024400&v=beta&t=urVuhM80wvBZ9QOYAwkuKQoVVryAWm1ZeuKvYzmvo74" alt="" width="150" height="150">
+    <h1 class="h3 mb-3 font-weight-normal">Título chulo</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Iniciar sesión">
+    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="location.href='{% url 'signup' %}'">Registrarse</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+
+</form>
+</body>
+</html>

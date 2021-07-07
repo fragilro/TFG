@@ -1,0 +1,27 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script>
+(function ($) {
+  $(document).ready(function(){
+    $(".fixed-top").hide();
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > $('#start-sticky').offset().top) {
+          $('.fixed-top').fadeIn();
+        } else {
+          $('.fixed-top').fadeOut();
+        }
+      });
+    });
+  });
+}(jQuery));
+</script>
+<script>
+$(function(){
+    var active = "{{ active }}";
+    var header1 = document.getElementById(active);
+    var header2 = document.getElementById(active.concat('2'));
+    header1.className += " active";
+    header2.className += " active";
+});
+</script>

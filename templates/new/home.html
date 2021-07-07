@@ -1,0 +1,196 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "new/imports.html" %}
+  <title>Ethic Data</title>
+</head>
+<body>
+
+  {% include "new/header.html" %}
+
+  <div id="carouselIndicators" class="carousel slide mb-5" data-ride="carousel">
+    <div class="carousel-inner text-white">
+      <div class="carousel-item active" style='background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("{% static "/media/legal-repercussion-with-big-data.jpg" %}");background-size: cover;'>
+        <div class="d-flex min-vh-100">
+          <div class="m-auto pr-lg-5">
+            <h1>La plataforma de<br>gestión ética del futuro</h1>
+            <h5>Lo que necesitas<br class="d-lg-none"> para tus procesos de<br class="d-lg-none"> Big Data</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="start-sticky" class="container py-5">
+  <div class="row py-5">
+    <div class="col-6 d-flex  align-items-center">
+      <div>
+        <div style="margin-top:-20px"><small class="text-azul">SEGURIDAD</small></div>
+        <h3 class="pt-3">Crea un entorno seguro para tu información y la de tus usuarios</h3>
+        <p class="pt-3">Cientos de empresas en España han sufrido<br> brechas de seguridad que han alterado o incluso<br> llegado a destruir la organización.</p>
+      </div>
+    </div>
+    <div class="col-6 text-center">
+      <img style="z-index:100" class="img-fluid position-relative" src="{% static 'media/conectividad.jpeg' %}"></img>
+      <div class="position-absolute" style="background:rgb(255,200,46);top:0;right:0;width:200px; height:60px;margin-top:-20px"></div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-6 text-center">
+      <img style="z-index:100" class="img-fluid position-relative" src="{% static 'media/Tendencias.jpeg' %}"></img>
+      <div class="position-absolute" style="background:rgb(27,54,98);top:0;left:0;width:200px; height:60px;margin-top:-20px"></div>
+    </div>
+    <div class="col-6 d-flex align-items-center">
+      <div>
+        <div style="margin-top:-20px"><small class="text-azul">COMPETITIVIDAD</small></div>
+        <h3 class="pt-3">Genera ventajas competitivas sostenibles gracias a la gobernanza de los datos</h3>
+        <p class="pt-3">Una conducta ética no tiene por qué mermar tus objetivos<br>, al contrario, es una fuente de valor<br> para tu empresa<br></p>
+      </div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-6 d-flex align-items-center">
+      <div>
+        <div style="margin-top:-20px"><small class="text-azul">LIDERAZGO</small></div>
+        <h3 class="pt-3">Conviertete en una empresa ética líder y contribuye al cambio</h3>
+        <p class="pt-3">Puedes llegar a ser un modelo de referencia<br> e incrementar la confianza en tu organización. </p>
+      </div>
+    </div>
+    <div class="col-6 text-center">
+      <img style="z-index:100" class="img-fluid position-relative" src="{% static 'media/3.LeadInnovators.jpeg' %}"></img>
+      <div class="position-absolute" style="background:rgb(27,54,98);bottom:0;right:0;width:200px; height:60px;margin-bottom:-20px"></div>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-6 text-center">
+      <img style="z-index:100" class="img-fluid position-relative" src="{% static 'media/6.Techtrends.jpeg' %}"></img>
+      <div class="position-absolute" style="background:rgb(255,200,46);bottom:0;left:0;width:200px; height:60px;margin-bottom:-20px"></div>
+    </div>
+    <div class="col-6 d-flex align-items-center">
+      <div>
+        <div style="margin-top:-20px"><small class="text-azul">ANTICIPACIÓN</small></div>
+        <h3 class="pt-3">Anticípate a las nuevas tecnologías y a los dilemas morales que conllevan</h3>
+        <p class="pt-3">Té entorno está cambiando, no esperes a que sea <br> demasiado tarde para adaptarte a él. </p>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-5">
+    <div class="col-12 text-center">
+      <a class="btn btn-azul" role="button" href="{% url 'iniciarsesion' %}"><small>Accede ahora</small></a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-5 text-center" style="background:rgb(255,200,46);">
+  <div class="container p-5">
+    <div class="row row-cols-1 row-cols-lg-3 px-5">
+      <div class="col py-2 py-lg-5">
+        <div><span style="font-size:80px; font-weight:700" class="text-white">46%</span></div>
+        <div style="margin-top:-20px"><small class="text-azul">De organizaciones no se han adaptado</small></div>
+      </div>
+      <div class="col py-2 py-lg-5">
+        <div><span style="font-size:80px; font-weight:700" class="bold text-white">47%</span></div>
+        <div style="margin-top:-20px"><small class="text-azul">De entidades bajo riesgo de sanción</small></div>
+      </div>
+      <div class="col py-2 py-lg-5">
+        <div><span style="font-size:80px; font-weight:700" class="text-white">10M</span></div>
+        <div style="margin-top:-20px"><small class="text-azul">De euros de importe de sanción</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5">
+  <div class="row row-cols-1 row-cols-md-2 px-5 pt-5">
+    <div class="col py-5">
+      <div class="row">
+        <div class="col-3">
+          <img class="img-fluid" src="{% static 'media/conocimiento.png' %}"></img>
+        </div>
+        <div class="col-9">
+          <h5 class="medium">Privacidad</h5>
+          <p>Tu privacidad y la de los tuyos es lo primordial. No te la juegues y asegura tu información.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col py-5">
+      <div class="row">
+        <div class="col-3">
+          <img class="img-fluid" src="{% static 'media/economia.png' %}"></img>
+        </div>
+        <div class="col-9">
+          <h5 class="medium">Transparencia</h5>
+          <p>Ser transparente no implica peores procesos. Aprende a comunicarlo y genera ventaja competitiva y valor.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col py-5">
+      <div class="row">
+        <div class="col-3">
+          <img class="img-fluid" src="{% static 'media/globalizacion.png' %}"></img>
+        </div>
+        <div class="col-9">
+          <h5 class="medium">Buenas prácticas</h5>
+          <p>Toda una guía basada en las mejores prácticas para que puedas garantizar un correcto uso de la información.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col py-5">
+      <div class="row">
+        <div class="col-3">
+          <img class="img-fluid" src="{% static 'media/cambios.png' %}"></img>
+        </div>
+        <div class="col-9">
+          <h5 class="medium">Otras herramientas</h5>
+          <p>Accede a otras herramientas oficiales para complementar nuestra guía o si quieres llevar tu cultura ética a otro nivel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pb-5">
+    <div class="col-12 text-center">
+      <a class="btn btn-azul" role="button" href="{% url 'iniciarsesion' %}"><small>Accede ahora</small></a>
+    </div>
+  </div>
+</div>
+
+<div class="py-5" style="background:linear-gradient(rgba(27,54,98,0.6), rgba(27,54,98,0.6)),url('{% static 'media/spasos.jpeg' %}');background-size:cover;background-position:center;background-attachment: fixed;">
+    <div class="container-fluid py-5 text-center text-white">
+      <div class="py-5">
+        <h2>Evalúa tu perspectiva actual</h2>
+        <h3 class="regular pt-4">Te ayudamos a mejorar en la gestión ética de tus datos y<br> a medir tu evolución y progreso en el tiempo.</h3>
+        <a class="btn btn-blanco mt-5" role="button" href="{% url 'autodiagnostico' %}"><small>Autodiagnóstico</small></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5" style="background:rgb(27,54,98);">
+    <div class="container py-5">
+      <div class="row pb-5">
+        <div class="col pb-5 text-center text-white">
+          <h2>Empresas que ya han comenzado a gestionar sus datos de forma ética</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center align-items-center">
+          <img style="max-height:40px" class="img-fluid" src="{% static 'media/logo innsai blanco .png' %}"></img>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+          <img style="max-height:70px" class="img-fluid" src="{% static 'media/LOGO_BANKIA_FORWAD_BY_INNSAI_BLANCO_FULL.png' %}"></img>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+          <img style="max-height:50px" class="img-fluid" src="{% static 'media/RPET-logo-02.png' %}"></img>
+        </div>
+      </div>
+      <div class="col-12 pt-5 text-center">
+      </div>
+    </div>
+  </div>
+  {% include "new/footer.html" %}
+
+  {% include "new/scripts.html" %}
+
+</body>
+
+</html>

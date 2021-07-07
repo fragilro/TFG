@@ -1,0 +1,48 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "new/imports.html" %}
+  <title>Iniciar sesión</title>
+</head>
+<body>
+
+  {% include "new/header.html" %}
+
+  <div class="container-fluid">
+    <div class="row min-vh-100">
+      <div class="col-7 pb-5 pl-5 d-flex flex-column justify-content-center align-items-center text-white" style="background:url('{% static 'media/login.jpeg' %}'); background-position:center">
+        <div class="pb-5 pl-5">
+          <h5>BIENVENIDO A</h5>
+          <h2>La plataforma de <br>gestión ética del futuro</h2>
+        </div>
+      </div>
+      <div class="col-5 pb-5 d-flex flex-column justify-content-center align-items-center" style="background:rgb(240,240,240)">
+        <form id="login-form" method="post" action="{% url 'app' %}">
+          <h4>Inicia sesión</h4>
+            {% csrf_token %}
+              <div class="pt-3" style="font-weight:bold">
+                {{ form.username|as_crispy_field }}
+              </div>
+              <div class="" style="font-weight:bold">
+                {{ form.password|as_crispy_field }}
+              </div>
+            {% if form.errors %}
+              <p class=" label label-danger">Los credenciales son incorrectos. Por favor, intentalo de nuevo.</p>
+            {% endif %}
+            <div class="pt-2">
+              <button class="btn btn-azul w-100" type="submit" name="action">Iniciar sesión</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% include "new/footer.html" %}
+
+  {% include "new/scripts.html" %}
+
+</body>
+
+</html>

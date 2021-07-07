@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+{% csrf_token %}
+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/logout/" class="navbar-brand d-flex align-items-center">
+            <strong>Cerrar sesión</strong>
+          </a>
+        </div>
+      </div>
+</header>
+<div>
+    </div>
+<section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Bienvenido {{e}}</h1><br>
+            <p>
+                <a href="/guia/" class="btn btn-primary my-2">Ir a la guía</a>
+            </p>
+            <p>
+                <a href="/create/" class="btn btn-secondary my-2">Crear report</a>
+            </p>
+            <p>
+                <a href="/check/" class="btn btn-secondary my-2">Chequear report</a>
+            </p>
+        </div>
+</section>
+
+</body>
+</html>

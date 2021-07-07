@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "new/imports.html" %}
+  <title>Autodiagnóstico</title>
+</head>
+<body style="background:rgb(240,240,240)">
+
+  {% include "new/header.html" %}
+  <div class="text-white py-5" style="background:linear-gradient(rgba(9,30,64,0.4), rgba(9,30,64,0.4)), url('{% static 'media/Macrotendencias.jpeg' %}'); background-size: cover">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col">
+          <h2>Autodiagnóstico</h2>
+          <h3>Con nuestro cuestionario podrás conocer<br> aquellas áreas en las que necesitas mejorar.</h3>
+          <h5>Observa como evoluciona la gestión ética<br> de la informaciónen tu empresa.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-5 text-azul">
+    <div class="row py-5" style="background:white; border-radius:15px; min-height:300px">
+      {% if not evaluaciones %}
+      <div class="col-12 text-center">
+        <h4>Parece que aún no has realizado<br> ningún autodiagnóstico.</h4>
+        <img style="height:70px" class="img-fluid" src="{% static 'media/icons/2.png' %}"></img>
+      </div>
+      {% else %}
+      <div class="col-12 px-5 pb-5">
+        <small>TUS EVALUACIONES</small>
+      </div>
+        {% for evaluacion in evaluaciones %}
+        <div class="col-12 px-5 pb-3 text-white">
+          <a href="{% url 'pasados' evaluacion.id %}">
+            <div class="py-4 px-5 hover-up-shadow" style="background-color:rgba(27,54,98,0.9);border-radius:15px">
+            <h4>Evaluación realizada el {{ evaluacion.date }}</h4>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      {% endif %}
+      <div class="col-12 text-center pt-4">
+        <a class="text-center btn btn-azul px-4" role="button" href="{% url 'formulario' %}"><small>Nuevo autodiagnóstico</small></a>
+      </div>
+    </div>
+  </div>
+
+  {% include "new/footer.html" %}
+
+  {% include "new/scripts.html" %}
+  </body>
+
+  </html>

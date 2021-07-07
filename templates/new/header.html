@@ -1,0 +1,33 @@
+<div class="position-absolute w-100" style="z-index:100">
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">ETHIC DATA</a>
+    <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+      <span class="navbar-toggler-icon" style=""></span>
+    </button>
+  </nav>
+  <div class="collapse header text-right" id="navbarToggleExternalContent">
+    <div class="p-4">
+      <div><a id="Inicio" class="btn" role="button" href="{% url 'home' %}">Inicio</a></div>
+      <div><a id="Iniciar" class="btn" role="button" href="{% url 'iniciarsesion' %}">Acceso</a></div>
+      <div><a id="Aplicación" class="btn" role="button" href="{% url 'app' %}">Aplicación</a></div>
+      <div><a id="Autodiagnostico" class="btn" role="button" href="{% url 'autodiagnostico' %}">Autodiagnóstico</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-top">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">ETHIC DATA</a>
+    <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="collapse header text-right" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <div><a id="Inicio2" class="btn" role="button" href="{% url 'home' %}">Inicio</a></div>
+      <div><a id="Iniciar2" class="btn" role="button" href="{% url 'iniciarsesion' %}">Acceso</a></div>
+      <div><a id="Aplicación2" class="btn" role="button" href="{% url 'app' %}">Aplicación</a></div>
+      <div><a id="Autodiagnostico2" class="btn" role="button" href="{% url 'autodiagnostico' %}">Autodiagnóstico</a></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  {% include "monitor/imports.html" %}
+  <title>Innsai Monitor</title>
+</head>
+<body>
+
+  {% include "monitor/externa/header.html" %}
+
+  <div class="container-fluid d-flex py-5 text-azul mb-5" style="background:rgb(240, 240, 240);min-height:70vh">
+    <div class="m-auto pr-lg-5">
+      <h1 class="pr-lg-5">Encuentra el plan perfecto</h1>
+      <h5>Elige la opción de producto que mejor se adapte a tí</h5>
+    </div>
+  </div>
+
+  <div id="start-sticky" class="mb-5">&nbsp</div>
+
+  <div class="container mb-5">
+    <nav>
+      <div class="nav nav-tabs mb-5" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="nav-soluciones-tab" data-toggle="tab" href="#nav-soluciones" role="tab" aria-controls="nav-home" aria-selected="true">SOLUCIONES</a>
+        <a class="nav-link" id="nav-empresas-tab" data-toggle="tab" href="#nav-empresas" role="tab" aria-controls="nav-empresas" aria-selected="false">EMPRESAS</a>
+        <a class="nav-link" id="nav-vc-tab" data-toggle="tab" href="#nav-vc" role="tab" aria-controls="nav-vc" aria-selected="false">VENTURE CAPITAL</a>
+        <a class="nav-link" id="nav-universidades-tab" data-toggle="tab" href="#nav-universidades" role="tab" aria-controls="nav-universidades" aria-selected="false">UNIVERSIDADES</a>
+      </div>
+    </nav>
+    <h3>Elige la opción que mejor se adapte a ti</h3>
+    <h5>Lorem ipsun dikir sit amet, consectutur adiscipingelit, integer porta iaculis.<h5>
+    <div class="tab-content mt-5" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-soluciones" role="tabpanel" aria-labelledby="nav-soluciones-tab">
+        <h4 class="text-center text-lg-left">Discovering Future</h4>
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 pb-5">
+          <div class="col order-4 order-lg-1 d-flex flex-column justify-content-end align-items-center py-5">
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Basic</small></a>
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Premium</small></a>
+          </div>
+          <div class="col order-1 order-lg-2 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Trends<br>Discover</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col order-2 order-lg-3 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Innovation<br>Explorer</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col order-3 order-lg-4 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Lead<br>Innovators</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="text-center text-lg-left">Creating Future</h4>
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 pb-5">
+          <div class="col order-4 order-lg-1 d-flex flex-column justify-content-end align-items-center py-5">
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Basic</small></a>
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Premium</small></a>
+          </div>
+          <div class="col order-1 order-lg-2 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Impact<br>Trends</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col order-2 order-lg-3 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Future<br>Challenges</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col order-3 order-lg-4 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Tech<br>Trends</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="text-center text-lg-left">Accelerating Future</h4>
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 pb-5">
+          <div class="col order-4 order-lg-1 d-flex flex-column justify-content-end align-items-center py-5">
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Basic</small></a>
+            <a class="btn btn-azul my-1" style="width:150px" role="button" href="#"><small>Premium</small></a>
+          </div>
+          <div class="col order-1 order-lg-2 d-flex justify-content-center">
+            <div class="my-3 my-xl-5 d-flex p-5 home-tarjeta-responsive hover-amarillo">
+              <div class="m-auto pr-5 pt-5">
+                <h3>Corporate<br>Venture Models</h3>
+                <hr style="border-top: 1px solid black">
+                <h3>150€<small> /mes</small></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-empresas" role="tabpanel" aria-labelledby="nav-empresas-tab">...</div>
+      <div class="tab-pane fade" id="nav-vc" role="tabpanel" aria-labelledby="nav-vc-tab">...</div>
+      <div class="tab-pane fade" id="nav-universidades" role="tabpanel" aria-labelledby="nav-universidades-tab">...</div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 text-center text-white" style="background:rgb(27,54,98);">
+    <h2>¿Todavía tienes dudas?</h2>
+    <h3 class="regular pt-4">Evalúa tu conocimiento del futuro</h3>
+    <a class="btn btn-blanco my-5" role="button" href="#"><small>Autodiagnóstico</small></a>
+  </div>
+
+  {% include "monitor/externa/footer.html" %}
+
+  {% include "monitor/externa/scripts.html" %}
+
+</body>
+
+</html>
